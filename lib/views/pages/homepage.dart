@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(
-              Icons.shopping_cart,
+              Icons.search,
             ),
             onPressed: () {
               Navigator.push(context,
