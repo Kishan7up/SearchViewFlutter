@@ -39,15 +39,15 @@ class RemoteServices {
     }
   }
 
-  static Future<List<CustomersSearchModel>?>
-      fetch_search_customer_details() async {
+  static Future<List<CustomersSearchModel>?> fetch_search_customer_details(
+      query) async {
     await Future.delayed(Duration(seconds: 1));
 
     var url = App.BaseURL + "Customer/Search";
 
     //TODO Request Parameter
     Map<String, String> body = {
-      CustomerConst.WORD: "",
+      CustomerConst.WORD: query,
       CustomerConst.COMPANY_ID: '10'
     };
 

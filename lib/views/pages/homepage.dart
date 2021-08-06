@@ -1,8 +1,9 @@
 import 'package:e_officedesk/consts/base.dart';
 import 'package:e_officedesk/controllers/customer_controller.dart';
-import 'package:e_officedesk/services/network_type_ahead_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'search_user.dart';
 
 class HomePage extends StatelessWidget {
   final CustomerController customerController = Get.put(CustomerController());
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => NetworkTypeAhead()));
+                  MaterialPageRoute(builder: (context) => SearchUser()));
             },
           )
         ],

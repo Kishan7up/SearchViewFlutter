@@ -14,14 +14,14 @@ class CustomerSearchController extends GetxController {
 
   @override
   void onInit() {
-    fetch_search_customer_details();
+    fetch_search_customer_details(qry);
     super.onInit();
   }
 
-  void fetch_search_customer_details() async {
+  void fetch_search_customer_details(String query) async {
     try {
       isLoading(true);
-      var customers = await RemoteServices.fetch_search_customer_details();
+      var customers = await RemoteServices.fetch_search_customer_details(query);
       if (customers != null) {
         customer_search_list.value = customers;
       }
